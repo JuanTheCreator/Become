@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
-import SplitText from './SplitText';
+import ScrollFloat from './ScrollFloat';
 
 const Slide = ({ title, children }) => {
   return (
@@ -11,19 +11,16 @@ const Slide = ({ title, children }) => {
       transition={{ duration: 0.6, ease: 'easeInOut' }}
       style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'var(--fg)', padding: '2rem', textAlign: 'center' }}
     >
-      <SplitText
-        text={title}
-        className="text-4xl md:text-6xl font-bold"
-        delay={0.05}
-        duration={0.6}
+      <ScrollFloat
+        containerClassName="text-4xl md:text-6xl font-bold"
+        animationDuration={0.6}
         ease="power3.out"
-        splitType="chars"
-        from={{ opacity: 0, y: 50 }}
-        to={{ opacity: 1, y: 0 }}
-        threshold={0.2}
-        rootMargin="-100px"
-        textAlign="center"
-      />
+        scrollStart="center bottom+=50%"
+        scrollEnd="bottom bottom-=40%"
+        stagger={0.05}
+      >
+        {title}
+      </ScrollFloat>
       <div style={{ marginTop: '2rem', maxWidth: '800px' }}>
         {children}
       </div>
