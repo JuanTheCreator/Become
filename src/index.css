@@ -1,0 +1,144 @@
+/* Reset básico */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables de color */
+:root {
+  --bg: #fff;
+  --fg: #222;
+  --accent: #ff6b6b;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Usar la tipografía del sistema de Apple */
+  font-weight: 500; /* Ajustar el peso para que se asemeje más a la imagen */
+  font-size: 1.25rem; /* Ajustar el tamaño para que sea más visible */
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden; /* Evitar scroll innecesario */
+}
+
+/* Ajustes para h1, h2, h3 */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--accent);
+  color: var(--bg);
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+button:hover {
+  background-color: #ff4b4b; /* Color más oscuro para hover */
+  opacity: 0.9;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Ajustes para el fondo animado Aurora */
+.aurora-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Asegurar que esté detrás de todos los elementos */
+}
+
+/* Ajustes para el contenedor principal */
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Evitar scroll innecesario */
+}
+
+/* Ajustes para el contenedor del slider */
+.carousel-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 0.875rem;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
