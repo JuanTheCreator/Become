@@ -30,7 +30,7 @@ const Carousel = ({ slides }) => {
   }, []);
 
   return (
-    <div style={{ width: '100%', height: '100vh', position: 'relative', overflow: 'hidden', background: 'var(--bg)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+    <div style={{ width: '100%', height: '100vh', position: 'relative', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
       <AnimatePresence mode="wait">
         <Slide
           key={currentIndex}
@@ -42,7 +42,7 @@ const Carousel = ({ slides }) => {
       <div style={{ position: 'absolute', bottom: '10rem', textAlign: 'center', width: '150px', height: '2px', background: '#000', overflow: 'hidden' }}>
         <div style={{ width: `${((currentIndex + 1) / slides.length) * 100}%`, height: '100%', background: '#ff6b6b', transition: 'width 0.5s ease' }}></div>
       </div>
-      <footer style={{ position: 'absolute', bottom: '0', width: '100%', textAlign: 'center', padding: '1rem', background: 'var(--bg)', color: 'var(--fg)', fontSize: '0.875rem' }}>
+      <footer style={{ position: 'absolute', bottom: '0', width: '100%', textAlign: 'center', padding: '1rem', background: 'transparent', color: 'var(--fg)', fontSize: '0.875rem' }}>
         © {new Date().getFullYear()} Presentación de Diapositivas
       </footer>
     </div>

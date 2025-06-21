@@ -1,15 +1,15 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import SplitText from './SplitText';
 
 const Slide = ({ title, children }) => {
   return (
-    <motion.section
+    <Motion.section
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.6, ease: 'easeInOut' }}
-      style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: 'var(--bg)', color: 'var(--fg)', padding: '2rem', textAlign: 'center' }}
+      style={{ height: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', color: 'var(--fg)', padding: '2rem', textAlign: 'center' }}
     >
       <SplitText
         text={title}
@@ -27,7 +27,7 @@ const Slide = ({ title, children }) => {
       <div style={{ marginTop: '2rem', maxWidth: '800px' }}>
         {children}
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 
