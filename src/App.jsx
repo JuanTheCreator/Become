@@ -1,12 +1,12 @@
 import React from 'react'
 import Carousel from './components/Carousel'
 import Aurora from './components/Aurora';
-import { CardSwap } from '@appletosolutions/reactbits';
+
 
 const slidesData = [
 	{
-		title: 'Become GLOCAL – Principales aprendizajes del proyecto',
-		content: <p>Bienvenido a la presentación de nuestro proyecto Become GLOCAL.</p>,
+		title: 'Become GLOCAL',
+		content: <p>Bienvenido a la presentación de nuestra Historia Become.</p>,
 	},
 	{
 		title: 'Valor del proyecto',
@@ -37,17 +37,6 @@ const slidesData = [
                                         Lejos de dificultar el trabajo, nos ayudó a construir propuestas más
                                         sólidas.
                                 </p>
-                                <CardSwap width={300} height={200} cardDistance={40} delay={3000} pauseOnHover>
-                                        <div className="card" style={{display:'flex',alignItems:'center',justifyContent:'center',background:'#1e1e2f',color:'#fff',fontSize:'1rem'}}>
-                                                Perfiles variados enriquecen las ideas
-                                        </div>
-                                        <div className="card" style={{display:'flex',alignItems:'center',justifyContent:'center',background:'#262636',color:'#fff',fontSize:'1rem'}}>
-                                                Creatividad desde múltiples enfoques
-                                        </div>
-                                        <div className="card" style={{display:'flex',alignItems:'center',justifyContent:'center',background:'#2e2e3d',color:'#fff',fontSize:'1rem'}}>
-                                                Colaboración que potencia resultados
-                                        </div>
-                                </CardSwap>
                         </>
                 ),
         },
