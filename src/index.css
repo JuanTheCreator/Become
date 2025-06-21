@@ -47,8 +47,13 @@ body {
   font-weight: 500; /* Ajustar el peso para que se asemeje más a la imagen */
   font-size: 1.25rem; /* Ajustar el tamaño para que sea más visible */
   background: transparent;
-  color: var(--fg);
+  color: #fff; /* Cambiar el color del texto a blanco */
   overflow: hidden; /* Evitar scroll innecesario */
+}
+
+/* Cambiar el color de toda la tipografía a blanco */
+h1, h2, h3, p, a, span, li, button {
+  color: #fff;
 }
 
 /* Ajustes para h1, h2, h3 */
@@ -77,6 +82,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Ajustar el color de botones y footer a blanco */
+button {
+  color: #fff;
 }
 
 /* Ajustes para el fondo animado Aurora */
@@ -141,4 +151,9 @@ footer {
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
   }
+}
+
+/* Regla global para textos en blanco */
+body, html, * {
+  color: #ffffff !important;
 }
