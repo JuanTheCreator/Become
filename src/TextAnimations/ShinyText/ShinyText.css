@@ -3,7 +3,7 @@
 */
 
 .shiny-text {
-  color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+  color: #b5b5b5a4 !important; /* Ensure global styles don't override */
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
@@ -13,7 +13,8 @@
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
-  display: inline-block;
+  display: block;
+  margin: 0.5rem 0;
   animation: shine 5s linear infinite;
 }
 
